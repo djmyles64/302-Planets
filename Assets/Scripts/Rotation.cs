@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Rotation : MonoBehaviour
 {
+    public float degrees = 90;
     
     void Start()
     {
@@ -13,9 +14,9 @@ public class Rotation : MonoBehaviour
     
     void Update()
     {
-        float degrees = 90;
-        Vector3 to = new Vector3(degrees, 0, 0);
+        
+        Vector3 axis = new Vector3(0, degrees, degrees);
 
-        transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to, Time.deltaTime);
+        transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, axis, Time.deltaTime);
     }
 }
