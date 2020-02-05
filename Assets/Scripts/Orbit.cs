@@ -7,7 +7,8 @@ public class Orbit : MonoBehaviour
 {
     public Transform orbitCenter;
     public LineRenderer orbitPath;
-    [Range(1, 10)] public float radius = 6;
+    
+    [Range(1, 15)] public float radius = 6;
     [Range(4, 32)] public int resolution = 8;
     void Start()
     {
