@@ -10,12 +10,12 @@ public class Rewind : MonoBehaviour
     {
         if (isRewinding)
         {
-            Time.timeScale = -1;
+            Time.timeScale = 0;
             isRewinding = false;
         }
         else
         {
-            Time.timeScale = 0;
+            Time.timeScale = -1;
             isRewinding = true;
         }
 

@@ -7,6 +7,7 @@ public class Orbit : MonoBehaviour
 {
     public Transform orbitCenter;
     public LineRenderer orbitPath;
+    public float orbitSpeed = 2f;
     
     [Range(1, 15)] public float radius = 6;
     [Range(4, 32)] public int resolution = 8;
@@ -31,8 +32,8 @@ public class Orbit : MonoBehaviour
       
         Vector3 pos = (orbitCenter == null) ? Vector3.zero : orbitCenter.position;
 
-        pos.x = Mathf.Cos(angle) * mag;
-        pos.z = Mathf.Sin(angle) * mag;
+        pos.x = Mathf.Cos(angle * orbitSpeed) * mag;
+        pos.z = Mathf.Sin(angle * orbitSpeed) * mag;
         return pos;
     }
 

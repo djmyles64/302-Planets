@@ -1265,6 +1265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbitCenter: {fileID: 1079730631}
   orbitPath: {fileID: 0}
+  orbitSpeed: 1
   radius: 8.5
   resolution: 32
 --- !u!23 &1079730629
@@ -1339,6 +1340,7 @@ GameObject:
   - component: {fileID: 1355352330}
   - component: {fileID: 1355352329}
   - component: {fileID: 1355352332}
+  - component: {fileID: 1355352333}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1428,6 +1430,27 @@ MonoBehaviour:
   scrollSpeed: 20
   minY: 2
   maxY: 40
+--- !u!114 &1355352333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355352328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a61efd5b6a29c4a4ca8c4d093f4e2ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  views:
+  - {fileID: 1862744141}
+  - {fileID: 1442116000}
+  - {fileID: 1079730631}
+  - {fileID: 1819607982}
+  - {fileID: 1545010956}
+  - {fileID: 1493060176}
+  smoothSpeed: 1
+  offset: {x: 0.04, y: 0.8, z: -1.25}
 --- !u!1 &1414006213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,6 +1676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbitCenter: {fileID: 1442116000}
   orbitPath: {fileID: 0}
+  orbitSpeed: 2
   radius: 6.18
   resolution: 32
 --- !u!23 &1442115998
@@ -1728,6 +1752,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   degrees: 90
+--- !u!1 &1493060175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1493060176}
+  m_Layer: 0
+  m_Name: FullSystemCameraShot
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1493060176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493060175}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.6, y: 5.2, z: -28.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1545010951
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,6 +1912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbitCenter: {fileID: 1545010956}
   orbitPath: {fileID: 0}
+  orbitSpeed: -1
   radius: 15
   resolution: 32
 --- !u!23 &1545010954
@@ -2290,6 +2345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbitCenter: {fileID: 1819607982}
   orbitPath: {fileID: 0}
+  orbitSpeed: 2
   radius: 11.5
   resolution: 32
 --- !u!23 &1819607980
@@ -2387,6 +2443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbitCenter: {fileID: 207051668}
   orbitPath: {fileID: 0}
+  orbitSpeed: 1
   radius: 3.88
   resolution: 32
 --- !u!23 &1862744139
